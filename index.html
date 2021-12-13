@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrs. Abella's Class</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/apple.svg">
+</head>
+<body>
+    
+    <div class="main-page">
+        <header>
+            <nav>
+                <h1>Mrs. Abella's Class</h1>
+                <div class="menu-items">
+                    <a href="week.html"><span>This Week</span></a>
+                    <a href="gallery.html"><span>Gallery</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="image-slider">
+            
+            <!--image slider start-->
+            <div class="slider">
+                <div class="slides">
+
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <!--radio buttons end-->
+                    
+                    <!--slide images start-->
+                    <div class="slide first">
+                        <img src="media/gallery/main-1.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="media/gallery/main-2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="media/gallery/main-3.webp" alt="">
+                    </div>
+                    <!--slide images end-->
+                    
+                    <!--automatic navigation start-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                    <!--automatic navigation end-->
+                
+                </div>
+
+                <!--manual navigation start-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+                <!--manual navigation end-->
+
+            </div>
+            <!--image slider end-->
+        
+            <script type="text/javascript">
+            
+            var radio1 = document.getElementById('radio1');
+            var radio2 = document.getElementById('radio2');
+            var radio3 = document.getElementById('radio3');
+
+            document.getElementById('radio1').checked = true;
+            setInterval(function(){
+
+                if (radio1.checked == true) {
+                    radio2.checked = true;
+                }
+
+                else if (radio2.checked == true) {
+                    radio3.checked = true;
+                }
+
+                else if (radio3.checked == true) {
+                    radio1.checked = true;
+                }
+            }, 7000);
+            </script>
+        </div>
+
+
+
+
+
+        <div class="value-of-the-month">
+            <img class="notebook one" src="media/notebook.svg" alt="">
+            <img class="notebook two" src="media/notebook.svg" alt="">
+            <h3>
+                Value of the Month - Citizenship
+            </h3>
+        </div>
+
+        <div class="bulletin-board">
+            <div class="bulletin-wrap">
+                <img class="bulletin-img" src="media/bulletin-board.png" alt="">
+                
+                <picture>
+                    <source class="bulletin-img-extended" media="(max-width:650px)" srcset="media/extended-bulletin.png">
+                    <img class="bulletin-img" src="media/bulletin-board.png" alt="bulletin-board">
+                  </picture>
+    
+                <img onclick="toggleAnnouncements()" src="media/announcements.png" alt="" class="bulletin-item announcements">
+                <img onclick="toggleReminders()" src="media/reminders.png" alt="" class="bulletin-item reminders">
+                <img onclick="toggleSchedule()" src="media/schedule.png" alt="" class="bulletin-item schedule-img">
+            </div>
+        </div>
+
+        <div class="teachers">
+            <h2>Meet the Teachers</h2>
+            <div class="teacher one">
+                <img class="pfp" src="media/gallery/mrs-abella.JPG" alt="">
+                <div class="teacher-text">
+                    <p>My name is Aysa Abella and I am currently serving as a first grade ESE teacher at Everglades K-8 Center. I am very passionate about teaching Special Education and always strive to make a positive impact on my students. <br><br>
+                        My teaching style is flexible depending on the needs of each individual student. 
+                    </p>
+                    <div class="email-me">
+                        <img src="media/email-green.svg" alt="">
+                        <a href="mailto:302938@dadeschools.net"><span>email me</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="teacher two">
+                <img class="pfp" src="media/gallery/mrs-rubio.JPG" alt="">
+                <div class="teacher-text">
+                    <p>My name is Gloria Rubio. I am currently serving as a paraprofessional in Mrs. Abella’s first grade class. I am thrilled to be part of this beautiful class. <br><br>
+                        I have a passion for helping others and together with Mrs. Abella, I am very excited to help these wonderful students reach their potential.
+                    </p>
+                    <!-- <div class="email-me">
+                        <img src="media/email-green.svg" alt="">
+                        <a href="#"><span>email me</span></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-div">
+            <p>
+                <span class="span-one"><img src="media/quote.svg" alt="quote"></span>
+                <br>
+                The beautiful thing about learning is that no one can take it away from you.
+                <br>
+                <span class="span-two">- B.B. King</span>
+            </p>
+        </div>
+
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-col first">
+                    <h3>Mrs. Abella's Class</h3>
+                    <div class="credentials">website by <a href="https://lessthan7.studio/" target="_blank">lessthan7</a></div>
+                    <span>&copy; mrsabella.com 2021</span>
+                </div>
+
+                <img class="apple" src="media/apple.svg" alt="">
+
+                <div class="footer-col second">
+                    <a href="mailto:302938@dadeschools.net" class="email-span"><span><img src="media/email.svg" alt=""> Email Mrs. Abella</span></a>
+                    <span>website by <a href="https://lessthan7.studio/" target="_blank">lessthan7</a></span>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <!-- Pop up background cover -->
+
+    <div class="bg-cover" onclick="closeBulletin()"></div>
+
+    <div class="bulletin-board-pop-up">
+        <img onclick="closeBulletin()" class="close" src="media/close.svg" alt="close icon">
+
+        <div class="announcements-div">
+            <p><span>Career day: Thursday, January 20, 2022, from 9:00 AM-11:00 AM.</span> <br><br>
+                If you have any friends or family members that would be willing to come to our school and presenting to a class, speak with any of the counselors. 
+            </p><br>
+            <p>NNAT Testing this week, Wednesday at 12:15-1:15-Media Center
+            </p>
+        </div>
+        
+        <div class="reminders-div">
+            <p>Tuesday December 7 is the Last day for Doughnut Sale fundraiser.
+
+            </p>
+        </div>
+
+        <!-- <div class="schedule-div">
+            <img class="schedule-bg" src="media/placeholder.png" alt="">
+            <div class="cover"></div>
+
+
+            <div class="schedule">
+                <h2>Our Schedule</h2>
+                <img src="media/clock.svg" alt="clock element">
+            </div>
+
+            <div class="schedule-cols">
+                <div class="schedule-col left-col">
+                    <div class="col left">
+                        <ul>
+                            <li>8:10am - 8:20am</li>
+                            <li>9:05am - 9:45am</li>
+                            <li>9:50am - 10:25am</li>
+                            <li>10:30am - 11:00am</li>
+                            <li>11:00am - 11:15am</li>
+                            <li>11:00am - 11:15am</li>
+                        </ul>
+                    </div>
+                    <div class="col right">
+                        <ul>
+                            <li>Journal</li>
+                            <li>L.A.</li>
+                            <li>Writing</li>
+                            <li>Lunch</li>
+                            <li>Recess</li>
+                            <li>Recess</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="schedule-col right-col">
+                    <div class="col left">
+                        <ul>
+                            <li>11:20am - 12:00pm</li>
+                            <li>12:05pm - 12:40pm</li>
+                            <li>12:45pm - 1:15pm</li>
+                            <li>1:20pm - 1:45pm</li>
+                        </ul>
+                    </div>
+                    <div class="col right">
+                        <ul>
+                            <li>Math</li>
+                            <li>Science</li>
+                            <li>ESOL</li>
+                            <li>P.E.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+    
+        <div class="schedule-div">
+            <img src="media/schedule.svg" alt="">
+        </div>
+    </div>
+
+    <div class="spacing"></div>
+
+    <div class="bg-img">
+        <img src="media/bg-img.png" alt="">
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
